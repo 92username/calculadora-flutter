@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:expressions/expressions.dart';
 
 class CalcProvider with ChangeNotifier {
   String _displayValue = '0';
@@ -21,21 +22,22 @@ class CalcProvider with ChangeNotifier {
 
   // Add the calculate method
   void calculate() {
-    // Implement the calculation logic here
-    // For simplicity, let's assume it just evaluates the expression
     try {
-      final result = _evaluateExpression(_displayValue);
+      // Analisa a expressão inserida pelo usuário
+      final expression = Expression.parse(_displayValue);
+
+      // Avaliador padrão para calcular a expressão
+      const evaluator = ExpressionEvaluator();
+
+      // Avalia a expressão e armazena o resultado
+      final result = evaluator.eval(expression, {});
+
+      // Converte o resultado para string e exibe no display
       _displayValue = result.toString();
     } catch (e) {
+      // Em caso de erro, exibe "Error"
       _displayValue = 'Error';
     }
     notifyListeners();
-  }
-
-  double _evaluateExpression(String expression) {
-    // Implement a simple expression evaluator
-    // This is a placeholder for actual calculation logic
-    // You can use a package like 'expressions' for a more robust solution
-    return double.parse(expression); // Placeholder
   }
 }
