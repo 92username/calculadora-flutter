@@ -29,7 +29,11 @@ class _MyAppState extends State<MyApp> {
     return ChangeNotifierProvider(
       create: (_) => CalcProvider(),
       child: MaterialApp(
-        theme: _isDarkTheme ? ThemeData.dark() : ThemeData.light(),
+        debugShowCheckedModeBanner: false,
+        title: 'Calculator',
+        theme: _isDarkTheme 
+          ? ThemeData.dark().copyWith(colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 26, 39, 25)))
+          : ThemeData.light().copyWith(colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 27, 216, 223))),
         home: HomeScreen(toggleTheme: _toggleTheme),
       ),
     );

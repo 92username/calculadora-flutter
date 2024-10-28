@@ -25,7 +25,7 @@ class CalculatorButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16.0),
+            borderRadius: BorderRadius.circular(45.0),
           ),
           backgroundColor: color, // Atualizado para usar o parâmetro `color`
           padding: const EdgeInsets.all(10.0),
@@ -33,7 +33,7 @@ class CalculatorButton extends StatelessWidget {
         child: Text(
           label,
           style: TextStyle(
-            fontSize: 24,
+            fontSize: 50,
             fontWeight: FontWeight.bold,
             color: Theme.of(context).buttonTheme.colorScheme?.onPrimary,
           ),

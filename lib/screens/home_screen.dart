@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       appBar: AppBar(
         title: const Text('Calculadora Avançada'),
         actions: [
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(33.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                         width: buttonWidth,
                       ),
                       CalculatorButton(
-                        label: '/',
+                        label: '÷',
                         onPressed: () =>
                             context.read<CalcProvider>().input('/'),
                         color: Theme.of(context).colorScheme.secondary,
@@ -98,7 +98,7 @@ class HomeScreen extends StatelessWidget {
                         width: buttonWidth,
                       ),
                       CalculatorButton(
-                        label: '*',
+                        label: 'X',
                         onPressed: () =>
                             context.read<CalcProvider>().input('*'),
                         color: Theme.of(context).colorScheme.secondary,
