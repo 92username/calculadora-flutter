@@ -50,8 +50,8 @@ Antes de começar, você precisará ter instalado em sua máquina:
 
 ## 🖼️ Screenshots 
   
-![Light Theme](/assets/screenshotThemeLight.png)
-![Dark Theme](/assets/screenshotThemeDark.png)
+![Light Theme](assets/img/screenshotThemeLight.png)
+![Dark Theme](assets/img/screenshotThemeDark.png)
 
 
 
