@@ -33,7 +33,7 @@ class CalculatorButton extends StatelessWidget {
         child: Text(
           label,
           style: TextStyle(
-            fontSize: 50,
+            fontSize: 45,
             fontWeight: FontWeight.bold,
             color: Theme.of(context).buttonTheme.colorScheme?.onPrimary,
           ),

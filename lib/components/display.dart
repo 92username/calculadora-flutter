@@ -13,14 +13,18 @@ class Display extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
       decoration: BoxDecoration(
-        color: Colors.black,
+        color: Theme.of(context).colorScheme.surface,
         borderRadius: BorderRadius.circular(16.0),
+        border: Border.all(
+          color: Theme.of(context).colorScheme.outline,
+          width: 1,
+        ),
       ),
       child: Text(
         value,
-        style: const TextStyle(
+        style: TextStyle(
           fontSize: 48,
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.onSurface,
           fontWeight: FontWeight.bold,
         ),
         textAlign: TextAlign.right,
