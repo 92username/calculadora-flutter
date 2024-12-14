@@ -1,3 +1,4 @@
+[![Dart](https://github.com/92username/calculadora-flutter/actions/workflows/dart.yml/badge.svg)](https://github.com/92username/calculadora-flutter/actions/workflows/dart.yml)
 # Calculadora Flutter
 
 Bem-vindo à **Calculadora Flutter**! Este projeto foi desenvolvido para explorar as funcionalidades do Flutter, criando uma calculadora simples, funcional e com uma interface moderna.
